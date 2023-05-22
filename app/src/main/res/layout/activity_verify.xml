@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.VerifyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/getOtpLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:fontFamily="@font/lato_bold"
+            android:text="+91 9999999999"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/editMobileNumber"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@id/getOtpLevel"
+            app:layout_constraintStart_toEndOf="@id/getOtpLevel"
+            app:layout_constraintTop_toTopOf="@id/getOtpLevel" />
+
+        <TextView
+            android:id="@+id/enterYNLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/lato_black"
+            android:lineHeight="@dimen/_25sdp"
+            android:text="Enter The\nOTP"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/getOtpLevel" />
+
+        <EditText
+            android:id="@+id/otp"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/text_round_background"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="9999"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="@id/enterYNLevel"
+            app:layout_constraintTop_toBottomOf="@id/enterYNLevel" />
+
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@null"
+            android:backgroundTint="#F9CB10"
+            android:fontFamily="@font/lato_black"
+            android:text="Continue"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/otp"
+            app:layout_constraintTop_toBottomOf="@id/otp" />
+
+        <TextView
+            android:id="@+id/counterLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/continueBtn"
+            app:layout_constraintTop_toTopOf="@id/continueBtn"
+            app:layout_constraintBottom_toBottomOf="@id/continueBtn"
+            android:fontFamily="@font/lato_bold"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/continueBtn"
+            app:layout_constraintTop_toBottomOf="@id/continueBtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

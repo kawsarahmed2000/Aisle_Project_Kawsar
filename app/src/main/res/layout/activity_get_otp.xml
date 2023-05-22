@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.auth.GetOtp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/getOtpLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Get OTP"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/enterYNLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/lato_black"
+            android:lineHeight="@dimen/_25sdp"
+            android:text="Enter Your\nPhone Number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/getOtpLevel" />
+
+        <EditText
+            android:id="@+id/countryCode"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/text_round_background"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="+91"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="@id/enterYNLevel"
+            app:layout_constraintTop_toBottomOf="@id/enterYNLevel" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/text_round_background"
+            android:fontFamily="@font/lato_black"
+            android:gravity="center"
+            android:hint="9999999999"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toEndOf="@id/countryCode"
+            app:layout_constraintTop_toTopOf="@id/countryCode" />
+
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@null"
+            android:backgroundTint="#F9CB10"
+            android:fontFamily="@font/lato_black"
+            android:text="Continue"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/countryCode"
+            app:layout_constraintTop_toBottomOf="@id/countryCode" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationZ="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/continueBtn"
+            app:layout_constraintTop_toBottomOf="@id/continueBtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

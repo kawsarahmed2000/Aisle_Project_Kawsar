@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project"
+        tools:targetApi="31">
+
+        <!-- Add the following activities with updated attributes -->
+
+        <!-- Splash screen activity -->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Get OTP activity -->
+        <activity
+            android:name=".ui.auth.GetOtp"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <!-- Verify OTP activity -->
+        <activity
+            android:name=".ui.auth.VerifyActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <!-- Home activity -->
+        <activity
+            android:name=".ui.home.Home"
+            android:exported="false"
+            android:launchMode="singleTop">
+            <!-- Add any necessary intent-filter and configurations -->
+        </activity>
+
+    </application>
+
+</manifest>
